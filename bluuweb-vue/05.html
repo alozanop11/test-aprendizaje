@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computed</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="componentes/saludos.js"></script>
+  <script src="componentes/contador.js"></script>
+</head>
+
+<body>
+  <div id="app" class="container mt-5">
+
+    <saludo></saludo>
+    <contador></contador>
+
+  </div>
+  <script>
+    Vue.component("saludo", {
+      /* template: " <h1>saludo de forma estatico</h1>", */
+      template: //html
+        `
+      <div>
+        <h1>{{saludo}}</h1>
+        <h3>aklñfdjasdf</h3>
+      </div>
+      `,
+      data() {
+        return {
+          saludo: "Hola desde Vue"
+        }
+      }
+    });
+
+    new Vue({
+      el: "#app"
+    });
+
+  </script>
+</body>
+
+</html>
